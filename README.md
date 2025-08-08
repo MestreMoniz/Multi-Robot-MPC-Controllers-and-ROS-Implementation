@@ -74,6 +74,8 @@ Technical report available in the `docs/` folder.
 
 ![JetBot ROS Implementation in Gazebo](images/jetbot_ros_gazebo.png)  
 *ROS simulation showing JetBot navigating in Gazebo using the CasADi-based MPC controller for cooperative tasks.*
+
+
 ---
 ## Requirements
 
