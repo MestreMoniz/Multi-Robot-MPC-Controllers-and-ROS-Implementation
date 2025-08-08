@@ -69,8 +69,7 @@ Technical report available in the `docs/` folder.
 ### MATLAB Controllers
 - MATLAB R2020 or later  
 - Optimization Toolbox  
-- YALMIP (optional, depending on MPC formulation)  
-- CasADi (optional for advanced MPC variants)
+- YALMIP 
 
 ### ROS Implementation
 - ROS Melodic/Noetic  
