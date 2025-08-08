@@ -63,13 +63,6 @@ Technical report available in the `docs/` folder.
 
 ---
 
-# JetBot MPC Controllers and ROS Implementation
-
-## Project Overview
-... descrição e explicações gerais ...
-
-## Project Structure
-... listagem dos ficheiros ...
 
 ## Cooperative Control Visualizations
 
