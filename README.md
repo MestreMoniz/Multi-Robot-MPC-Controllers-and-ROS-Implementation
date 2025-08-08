@@ -73,7 +73,7 @@ Technical report available in the `docs/` folder.
 *Trajectory and velocity profile of JetBot 2 during cooperative interception control.*ROS simulation showing JetBot navigating in Gazebo using the CasADi-based MPC controller for cooperative tasks.*
 
 ![JetBot ROS Implementation in Gazebo](images/jetbot_ros_gazebo.png)  
-*ROS simulation showing JetBot navigating in Gazebo using the CasADi-based MPC controller for cooperative tasks.*
+*ROS simulation showing JetBot navigating in Gazebo using the CasADi-based MPC controller.*
 
 
 ---
