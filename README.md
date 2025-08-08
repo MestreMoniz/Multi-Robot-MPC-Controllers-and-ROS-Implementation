@@ -70,12 +70,11 @@ Technical report available in the `docs/` folder.
 *Trajectory and velocity profile of JetBot 1 during cooperative interception control.*
 
 ![JetBot 2 Trajectory and Velocity](images/jetbot2_trajectory_velocity.png)  
-*Trajectory and velocity profile of JetBot 2 during cooperative interception control.*
+*Trajectory and velocity profile of JetBot 2 during cooperative interception control.*ROS simulation showing JetBot navigating in Gazebo using the CasADi-based MPC controller for cooperative tasks.*
 
 ![JetBot ROS Implementation in Gazebo](images/jetbot_ros_gazebo.png)  
 *ROS simulation showing JetBot navigating in Gazebo using the CasADi-based MPC controller for cooperative tasks.*
 ---
-
 ## Requirements
 
 ### MATLAB Controllers
