@@ -62,6 +62,25 @@ Technical report available in the `docs/` folder.
 - **runDualRobotController.launch** – Launch file for two simulated JetBots.
 
 
+
+# JetBot MPC Controllers and ROS Implementation
+
+## Project Overview
+... descrição e explicações gerais ...
+
+## Project Structure
+... listagem dos ficheiros ...
+
+## Cooperative Control Visualizations
+
+![JetBot 1 Trajectory and Velocity](images/jetbot1_trajectory_velocity.png)  
+*Trajectory and velocity profile of JetBot 1 during cooperative interception control.*
+
+![JetBot 2 Trajectory and Velocity](images/jetbot2_trajectory_velocity.png)  
+*Trajectory and velocity profile of JetBot 2 during cooperative interception control.*
+
+![JetBot ROS Implementation in Gazebo](images/jetbot_ros_gazebo.png)  
+*ROS simulation showing JetBot navigating in Gazebo using the CasADi-based MPC controller for cooperative tasks.*
 ---
 
 ## Requirements
