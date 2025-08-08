@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="name" default="jetbot"/>
+    <arg name="sim" default="true"/>
+
+    <include file="$(find jetbot_ros)/launch/gazebo.launch" if="$(arg sim)"/>
+
+    <include file="$(find jetbot_ros)/launch/single_vehicle.launch">
+        <arg name="name" value="$(arg name)"/>
+        <arg name="ID" value="0"/>
+        <arg name="sim" value="$(arg sim)"/>
+        <arg name="x" value="0"/>
+        <arg name="y" value="0"/>
+        <arg name="z" value="0"/>
+    </include>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jetbot_ros)/launch/cfg.rviz"/>
+
+    <node pkg="jetbot_ros" type="controller.py" name="controller_node" output="screen"/>
+    
+
+</launch>
+
+

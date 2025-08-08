@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <!-- Arguments for launching -->
+    <arg name="name" default="jetbot"/>
+    <arg name="sim" default="true"/>
+
+    <!-- Launch Gazebo simulation (only once for both robots) -->
+    <include file="$(find jetbot_ros)/launch/gazebo.launch" if="$(arg sim)"/>
+
+    <!-- Launch the first JetBot (jetbot0) -->
+    <include file="$(find jetbot_ros)/launch/single_vehicle.launch">
+        <arg name="name" value="jetbot0"/>
+        <arg name="ID" value="0"/>
+        <arg name="sim" value="$(arg sim)"/>
+        <arg name="x" value="0"/>
+        <arg name="y" value="0"/>
+        <arg name="z" value="0"/>
+    </include>
+
+    <!-- Launch the second JetBot (jetbot1) -->
+    <include file="$(find jetbot_ros)/launch/single_vehicle.launch">
+        <arg name="name" value="jetbot1"/>
+        <arg name="ID" value="1"/>
+        <arg name="sim" value="$(arg sim)"/>
+        <arg name="x" value="2"/>  <!-- Adjust x to place jetbot1 differently -->
+        <arg name="y" value="0"/>
+        <arg name="z" value="0"/>
+    </include>
+
+    <!-- Launch RViz to visualize both robots -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jetbot_ros)/launch/cfg.rviz"/>
+
+    <!-- Launch controllers for both JetBots -->
+    <node pkg="jetbot_ros" type="controller4.py" name="DualRobotController" output="screen"/> 
+
+
+</launch>
