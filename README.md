@@ -36,31 +36,30 @@ Technical report available in the `docs/` folder.
 
 ## Project Structure
 
-📂 matlab_controllers/
-├── controllerSimple.m # Single robot MPC to fixed target
-├── controllerTracking.m # MPC for trajectory tracking
-├── controllerMovie.m # Dual robot orbiting controller
-├── controllerCooperative.m # Cooperative multi-robot interception MPC
-├── estimateIntersectionPoint.m # Compute interception points
-├── selectBestReferences.m # Select optimal interception references
-├── ReferenceWithPoints.m # Interpolate waypoints for references
-└── simulation_results/ # Simulation outputs and plots
+### MATLAB Controllers
 
-📂 ros_implementation/
-├── controller.py # ROS node implementing controllerSimple with CasADi
-├── controller4.py # Prototype ROS node for controllerMovie (multi-robot)
-├── CMakeLists.txt # Modified for ROS and CasADi integration
-├── launch/
-│ ├── run.launch # Launch file for single JetBot with MPC
-│ └── runDualRobotController.launch # Launch file for dual JetBots (prototype)
-├── scripts/
-│ ├── controller.py # ROS scripts for controllers
-│ └── controller4.py
-├── urdf/ # Robot description files (from base repo)
-└── worlds/ # Gazebo simulation worlds (from base repo)
+- **controllerCooperative.m** – Cooperative MPC for two robots (interception/coverage).
+- **controllerMovie.m** – MPC for dual robots orbiting a moving point.
+- **controllerSimple.m** – MPC for driving JetBot to a target position.
+- **controllerTracking.m** – MPC for trajectory tracking.
+- **estimateIntersectionPoint.m** – Compute interception points.
+- **ReferenceWithPoints.m** – Waypoint/reference point interpolation tools.
+- **selectBestReferences.m** – Select best interception references.
+- **Test_ControllerCooperative.m** – Test script for cooperative controller.
+- **Test_ControllerMovie.m** – Test script for movie controller.
+- **Test_ControllerSimple.m** – Test script for simple controller.
+- **Test_ControllerTracking.m** – Test script for tracking controller.
 
-📂 docs/
-└── CPCS-2.pdf # Full technical report
+### ROS Implementation
+
+- **CMakeLists.txt** – ROS build configuration.
+- **controller.py** – ROS node for controllerSimple (CasADi-based MPC).
+- **controller4.py** – ROS node (prototype) for dual-controller logic.
+- **controllerMovieSimCasadi.ipynb** – Jupyter simulation for movie controller.
+- **controllerSimpleSIMcasadi.ipynb** – Jupyter simulation for simple controller.
+- **README.txt** – Documentation for the ROS implementation.
+- **run.launch** – Launch file for one JetBot + MPC.
+- **runDualRobotController.launch** – Launch file for two simulated JetBots.
 
 
 ---
@@ -87,7 +86,7 @@ Technical report available in the `docs/` folder.
 ### MATLAB
 
 1. Open MATLAB in the `matlab_controllers` directory.  
-2. Run scripts like `controllerSimple.m`, `controllerTracking.m`, etc., to simulate each controller.  
+2. Run scripts like `Test_controllerSimple.m`, `Test_controllerTracking.m`, etc., to simulate each controller.  
 3. Review simulation data and plots saved in the `simulation_results` folder.
 
 ### ROS
