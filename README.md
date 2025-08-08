@@ -61,7 +61,7 @@ Technical report available in the `docs/` folder.
 - **run.launch** – Launch file for one JetBot + MPC.
 - **runDualRobotController.launch** – Launch file for two simulated JetBots.
 
-
+---
 
 # JetBot MPC Controllers and ROS Implementation
 
